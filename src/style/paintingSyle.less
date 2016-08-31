@@ -1,0 +1,126 @@
+.paintingStyle {
+		width: 100%;
+		text-align: center;
+		margin-top: 30px;
+		.item {
+			position: relative;
+			width: 24.4%;
+			height: 500px;
+			display: inline-block;
+			overflow: hidden;
+			z-index: 1;
+			cursor: pointer;
+			&.bg-1 {
+				background: url("../../img/1.jpg") center no-repeat;
+				background-size: cover;
+			}
+			&.bg-2 {
+				background: url("../../img/2.jpg") center no-repeat;
+				background-size: cover;
+			}
+			&.bg-3 {
+				background: url("../../img/3.jpg") center no-repeat;
+				background-size: cover;
+			}
+			&.bg-4 {
+				background: url("../../img/4.jpg") center no-repeat;
+				background-size: cover;
+			}
+			&:hover {
+				transition: 0.4s;
+				transform: scale(1.05);
+				z-index: 2;
+				.info {
+					height: 100%;
+					margin: 0;
+					.text{
+						vertical-align: top;
+						top: 20px;
+						.description{
+							display: block;
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			.info {
+				width: 100%;
+				height: 200px;
+				margin: 150px 0;
+				vertical-align: middle;
+				position: relative;
+				left: 0;
+				top: 0;
+				display: table;
+
+				opacity: 0.6;
+				transition: 0.5s;
+				.background {
+					position: absolute;
+					top: 0;
+					left: 0;
+
+					width: 100%;
+					height: 100%;
+					padding: 5px;
+					box-sizing: border-box;
+					background-color: white;
+					z-index: 1;
+				}
+				.text {
+					position: relative;
+					display: table-cell;
+					vertical-align: middle;
+					margin: 0 auto;
+					font-size: 36px;
+					line-height: 100%;
+					z-index: 2;
+					label{
+						cursor: pointer;
+					}
+					.description{
+						padding: 50px;
+						font-size: 16px;
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+@media (max-width: 980px) {
+		.paintingStyle {
+			.item{
+				display: block;
+				height: 100px;
+				width: 100%;
+				margin-bottom: 5px;
+				transition: none;
+
+				.info{
+					opacity: 0.6;
+					height: 100%;
+					margin: 0;
+					.background{
+						background: linear-gradient(to right, white, transparent);
+					}
+					.text{
+						line-height: 100px;
+						text-align: left;
+						padding-left: 30px;
+						box-sizing: border-box;
+						vertical-align: top;
+					}
+				}
+				&:hover{
+					transform: none;
+					.info {
+						.text {
+							top: 0;
+						}
+					}
+				}
+			}
+		}
+	}

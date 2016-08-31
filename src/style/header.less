@@ -1,0 +1,69 @@
+header{
+	background-color: black;
+	padding: 5px;
+	.navBar {
+		display: block;
+		color: white;
+		.formRow{
+			display: inline-block;
+			margin-right: 15px;
+			cursor: pointer;
+			&>*{
+				text-decoration: none;
+			}
+
+			&.main {
+				a {
+					font-size: 36px;
+					color: red;
+				}
+			}
+
+			&.item {
+				a {
+					font-size: 24px;
+					color: white;
+				}
+				&:hover{
+					a {
+						color: darkgray;
+					}
+				}
+			}
+
+
+		}
+	}
+}
+
+@media (max-width: 980px) {
+	header{
+		.navBar {
+			.formRow{
+				&.main{
+					a {
+						font-size: 24px;
+					}
+				}
+				&.item{
+					a {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	header {
+		.navBar {
+			.formRow {
+				&.main {
+					width: 100%;
+
+				}
+			}
+		}
+	}
+}

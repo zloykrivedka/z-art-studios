@@ -1,0 +1,90 @@
+	.infoPainter{
+		padding: 30px 0;
+		overflow: hidden;
+		max-width: 1280px;
+		margin: 0 auto;
+		.formRow {
+			width: 45%;
+			float: left;
+			margin-bottom: 20px;
+			margin-right: 5%;
+			.item {
+				display: table;
+				.image {
+					display: table-cell;
+					div{
+						border-radius: 200px;
+						border: solid 2px white;
+
+
+
+						width: 200px;
+						height: 200px;
+						&.alina{
+							background: url("../../img/alina.jpg") top center no-repeat;
+							background-size: cover;
+						}
+						&.veronika{
+							background: url("../../img/veronika.jpg") top center no-repeat;
+							background-size: cover;
+						}
+						&.katya{
+							background: url("../../img/katya.jpg") top center no-repeat;
+							background-size: cover;
+						}
+					}
+				}
+				.text {
+					display: table-cell;
+
+					color: dimgrey;
+					font-size: 18px;
+					vertical-align: middle;
+					padding-left: 15px;
+					min-width: 130px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 980px) {
+		.infoPainter{
+			.formRow{
+				width: 100%;
+				margin-bottom: 10px;
+				.item{
+					.image{
+						div{
+							width: 150px;
+							height: 150px;
+							border-radius: 150px;
+						}
+					}
+
+				}
+			}
+		}
+	}
+
+
+	@media (max-width: 768px) {
+		.infoPainter{
+			.formRow{
+				//width: 100%;
+				//margin-bottom: 10px;
+				.item{
+					//display: block;
+					.image{
+						//display: block;
+						div{
+							margin: 0 auto;
+							width: 100px;
+							height: 100px;
+							border-radius: 100px;
+						}
+					}
+				}
+			}
+		}
+	}
+
